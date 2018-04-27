@@ -1,5 +1,7 @@
 <template>
-  <h1>{{msg}}</h1>
+  <h1>
+    {{$store.state.login.username}}
+  </h1>
 </template>
 
 <script>
@@ -7,7 +9,7 @@ export default {
   name: 'login',
   data () {
     return {
-      msg:'login page'
+      // msg:$store.state.show
     }
   }
 }
