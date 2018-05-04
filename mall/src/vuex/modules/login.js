@@ -2,16 +2,9 @@
 
 export default {
   state: {
-      username: 'sssss',
-      password: 'eeeee'
-  },
-  getters: {
-
-  },
-  actions: {
-
-  },
-  mutations: {
-
+    loginForm:{
+      userName: null,
+      passWord: null
+    }
   }
 };
