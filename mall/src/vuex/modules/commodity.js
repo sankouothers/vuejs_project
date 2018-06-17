@@ -1,25 +1,24 @@
+import api from '../../api';
+import commodity from "../../api/commodity";
+
 export default {
   state: {
-    id: null,
-    name: null,
-    price: null,
+    commodityList: [],
   },
   actions: {
     loadCommodityList() {
-      return new Promise((resolve,reject) =>{
-        return [
-          {
-            id: '1',
-            name: 'wang',
-            price: '12',
-          },
-          {
-            id: '2',
-            name: 'pin',
-            price: '22',
-          }
-        ];
-      })
+      return new Promise((resolve, reject) => {
+        console.log("33333")
+        api.loadCommodityList()
+          .then(res => {
+            console.log("111",resolve)
+            console.log("222",res)
+            resolve(res);
+          })
+          .catch(err => {
+            reject(err);
+          });
+      });
     }
   }
 };

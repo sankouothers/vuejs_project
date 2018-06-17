@@ -33,6 +33,7 @@
   export default {
     name: 'mall',
     data() {
+      console.log("4444",mapState)
       return {
         msg: 'mall',
         options: [
@@ -57,7 +58,6 @@
             label: '北京烤鸭'
           }
         ],
-        commodityList: null,
         value5: [],
         activeIndex: '1',
         input: ''
@@ -65,7 +65,7 @@
     },
     computed: {
       ...mapState({
-        commodityList:state => state.commodity
+        commodityList:state => state.commodity.commodityList
       })
     },
     mounted() {
